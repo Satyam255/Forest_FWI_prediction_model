@@ -80,3 +80,25 @@ The prediction is made using a **Ridge Regression model** and deployed using **F
 ---
 
 ```md
+📤 Output
+Predicted Fire Weather Index (FWI) displayed on the same homepage after form submission.
+
+🚀 How to Run Locally
+1. Clone the repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/fire-fwi-predictor.git
+cd fire-fwi-predictor
+2. Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Run the Flask app
+bash
+Copy
+Edit
+python app.py
+4. Open in browser
+Visit http://localhost:5000 in your browser.
