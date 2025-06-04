@@ -95,14 +95,12 @@ cd fire-fwi-predictor
 2. Install dependencies
 
 ```bash
-Copy
-Edit
+
 pip install -r requirements.txt
 ```
 3. Run the Flask app
 ```bash
-Copy
-Edit
+
 python app.py
 ```
 4. Open in browser
