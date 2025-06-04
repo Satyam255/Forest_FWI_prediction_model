@@ -72,7 +72,7 @@ The prediction is made using a **Ridge Regression model** and deployed using **F
   - Wind Speed
   - Rainfall
   - FFMC, DMC, ISI
-  - Region (0/1/2)
+  - Region (0/1)
   - Class (1 = Fire, 0 = Not Fire)
 - Predicts **FWI** using the trained model
 - Displays the result on the same page
