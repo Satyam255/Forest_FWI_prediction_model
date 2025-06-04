@@ -78,16 +78,17 @@ The prediction is made using a **Ridge Regression model** and deployed using **F
 - Displays the result on the same page
 
 ---
+## 📤 Output
 
-```md
-📤 Output
-Predicted Fire Weather Index (FWI) displayed on the same homepage after form submission.
+Predicted **Fire Weather Index (FWI)** is displayed on the homepage after form submission.
 
-🚀 How to Run Locally
+---
+
+## 🚀 How to Run Locally
+
 1. Clone the repository
-bash
-Copy
-Edit
+
+```bash
 git clone https://github.com/your-username/fire-fwi-predictor.git
 cd fire-fwi-predictor
 2. Install dependencies
@@ -102,3 +103,6 @@ Edit
 python app.py
 4. Open in browser
 Visit http://localhost:5000 in your browser.
+
+```md
+
