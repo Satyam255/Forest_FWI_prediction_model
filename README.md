@@ -91,18 +91,22 @@ Predicted **Fire Weather Index (FWI)** is displayed on the homepage after form s
 ```bash
 git clone https://github.com/your-username/fire-fwi-predictor.git
 cd fire-fwi-predictor
+```
 2. Install dependencies
-bash
+
+```bash
 Copy
 Edit
 pip install -r requirements.txt
+```
 3. Run the Flask app
-bash
+```bash
 Copy
 Edit
 python app.py
+```
 4. Open in browser
+```bash
 Visit http://localhost:5000 in your browser.
-
-```md
+```
 
