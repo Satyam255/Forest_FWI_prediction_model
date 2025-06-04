@@ -1,123 +1,82 @@
-﻿# Forest_FWI_prediction_model
+# 🔥 Algerian Forest Fire FWI Predictor
 
-🔥 Algerian Forest Fire FWI Predictor
-This project predicts the Fire Weather Index (FWI) based on meteorological data from two regions of Algeria: Bejaia and Sidi Bel-abbes. The prediction is made using a machine learning regression model and served through a web-based interface using Flask.
+This project predicts the **Fire Weather Index (FWI)** based on meteorological data from two regions of Algeria: **Bejaia** and **Sidi Bel-abbes**.  
+The prediction is made using a **Ridge Regression model** and deployed using **Flask** with a simple frontend interface.
 
-📊 Dataset Overview
-Total Records: 244 instances
+---
 
-Regions:
+## 📊 Dataset Overview
 
-Bejaia (122 instances)
+- **Total Records**: 244 instances  
+- **Regions**:
+  - Bejaia (122 instances)
+  - Sidi Bel-abbes (122 instances)
+- **Time Period**: June 2012 – September 2012  
+- **Classes**:
+  - Fire: 138 instances
+  - Not Fire: 106 instances
 
-Sidi Bel-abbes (122 instances)
+---
 
-Time Period: June 2012 – September 2012
+## 🔧 Attributes
 
-Classes:
+| Feature | Description | Range |
+|--------|-------------|-------|
+| Date | Day/Month/Year | June–Sept 2012 |
+| Temp | Temperature at noon (°C) | 22–42 |
+| RH | Relative Humidity (%) | 21–90 |
+| Ws | Wind Speed (km/h) | 6–29 |
+| Rain | Rainfall (mm) | 0–16.8 |
+| FFMC | Fine Fuel Moisture Code | 28.6–92.5 |
+| DMC | Duff Moisture Code | 1.1–65.9 |
+| DC | Drought Code | 7–220.4 |
+| ISI | Initial Spread Index | 0–18.5 |
+| BUI | Buildup Index | 1.1–68 |
+| FWI | Fire Weather Index (Target) | 0–31.1 |
+| Classes | Binary: Fire / Not Fire | - |
 
-Fire: 138 instances
+---
 
-Not Fire: 106 instances
+## ⚙️ Workflow
 
-🔧 Attributes:
-Feature	Description	Range
-Date	Day/Month/Year	June–Sept 2012
-Temp	Temperature at noon in °C	22–42
-RH	Relative Humidity (%)	21–90
-Ws	Wind Speed (km/h)	6–29
-Rain	Rainfall (mm)	0–16.8
-FFMC	Fine Fuel Moisture Code	28.6–92.5
-DMC	Duff Moisture Code	1.1–65.9
-DC	Drought Code	7–220.4
-ISI	Initial Spread Index	0–18.5
-BUI	Buildup Index	1.1–68
-FWI	Fire Weather Index (Target)	0–31.1
-Classes	Binary: Fire / Not Fire	-
+### ✅ Exploratory Data Analysis (EDA)
+- Distribution plots
+- Correlation matrix
+- Outlier detection
 
-⚙️ Workflow
-Exploratory Data Analysis (EDA)
+### ✅ Preprocessing
+- Feature standardization using `StandardScaler`
+- Encoding categorical labels
 
-Distribution plots, correlation matrices, outlier detection, etc.
+### ✅ Model Training & Evaluation
+- Models tried:
+  - Ridge Regression ✅
+  - Lasso Regression
+  - ElasticNet Regression
+- **Best Model**: Ridge Regression  
+  - Accuracy (R²): **0.98**
 
-Preprocessing
+---
 
-Feature standardization using StandardScaler
+## 🖼️ Web App Screenshot
 
-Conversion of categorical labels to numeric
+![App Screenshot](screenshot.png)
 
-Model Training & Evaluation
 
-Tried multiple regression models:
+## 🌐 Web App Features
 
-Ridge Regression ✅
+- Built with **Flask**
+- Takes user inputs via a web form:
+  - Temperature
+  - Relative Humidity
+  - Wind Speed
+  - Rainfall
+  - FFMC, DMC, ISI
+  - Region (0/1/2)
+  - Class (1 = Fire, 0 = Not Fire)
+- Predicts **FWI** using the trained model
+- Displays the result on the same page
 
-Lasso Regression
+---
 
-ElasticNet Regression
-
-Best Model: Ridge Regression with 98% accuracy (R² = 0.98)
-
-🌐 Web App Features
-Built with Flask
-
-Accepts the following inputs via a web form:
-
-Temperature
-
-Relative Humidity
-
-Wind Speed
-
-Rainfall
-
-FFMC, DMC, ISI (FWI indices)
-
-Region (encoded numerically)
-
-Fire Class (1 for Fire, 0 for Not Fire)
-
-Predicts the FWI (Fire Weather Index) using the trained Ridge Regression model
-
-Displays the prediction on the same page
-
-🖼️ Web App Screenshot
-(Insert screenshot here)
-
-📥 Input Parameters (from form)
-Field	Description
-temp	Temperature (°C)
-rh	Relative Humidity (%)
-ws	Wind Speed (km/h)
-rain	Rainfall (mm)
-ffmc	Fine Fuel Moisture Code
-dmc	Duff Moisture Code
-isi	Initial Spread Index
-classes	1: Fire, 0: Not Fire
-region	0: Unknown, 1: Bejaia, 2: Sidi Bel-abbes (example codes)
-
-📤 Output
-Predicted Fire Weather Index (FWI) value shown on the home page after form submission.
-
-🚀 How to Run Locally
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/fire-fwi-predictor.git
-cd fire-fwi-predictor
-Install dependencies:
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the Flask app:
-
-bash
-Copy
-Edit
-python app.py
-Open your browser and go to:
-http://localhost:5000
+```md
