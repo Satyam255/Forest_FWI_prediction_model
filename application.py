@@ -38,9 +38,9 @@ def predict_datapoint():
         result = ridge_model.predict(new_data_scaled)
 
         # Corrected: send the prediction under the correct variable name
-        return render_template('home.html', prediction='{:.2f}'.format(result[0]))
+        return render_template('index.html', prediction='{:.2f}'.format(result[0]))
     else:
-        return render_template('home.html')
+        return render_template('index.html')
 
 
 
