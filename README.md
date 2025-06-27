@@ -89,7 +89,7 @@ Predicted **Fire Weather Index (FWI)** is displayed on the homepage after form s
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/fire-fwi-predictor.git
+git clone https://github.com/Satyam255/Forest_FWI_prediction.git
 cd fire-fwi-predictor
 ```
 2. Install dependencies
